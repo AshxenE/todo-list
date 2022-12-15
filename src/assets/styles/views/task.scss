@@ -1,0 +1,80 @@
+.list-task {
+  height: 100%;
+  min-height: 100vh;
+  background: #F7F7FF;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px 0;
+  background: radial-gradient(#A8BCEA, transparent);
+  &__title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__wrap {
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 16%);
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+  }
+
+  &__header {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #000000;
+    border-bottom: 1px solid #E3E3E3;
+
+    :deep(.input__inner) {
+      input {
+        font-size: 24px !important;
+      }
+    }
+  }
+  &__content {
+
+    &-item {
+      padding-left: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid #E3E3E3;
+    }
+
+    &:not(:first-child) {
+      :deep(.input__inner) {
+        input {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+
+  :deep(.input__inner) {
+    input {
+      border: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    column-gap: 15px;
+  }
+
+  .task-content {
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
